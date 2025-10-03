@@ -1,0 +1,139 @@
+/* MOBILE FIRST DESIGN */
+/*==== Typography and colors and font-styles=====*/
+:root {
+  font-size: 16px;
+}
+body {
+  font-family: sans-serif;
+  background-color: aliceblue;
+  font-size: 1rem;
+}
+
+.container {
+  background-color: white;
+}
+
+h1 {
+  color: #333;
+  font-size: 1.5rem;
+}
+
+#taskToDo {
+  font-size: 1rem;
+}
+
+#input-section-button {
+  background-color: #1abefe;
+  color: rgb(57, 16, 16);
+  font-size: 1rem;
+}
+/* Tasks creating List and able to tell if completed */
+
+#taskList li {
+  background-color: #edcbf6;
+}
+
+.completed {
+  background: #d4edda !important;
+  text-decoration: line-through;
+  color: #333333;
+  /* color:#6c757d; */
+}
+
+.emoji-status-update {
+  font-size: 1.25em;
+}
+
+/* ======Layout====== */
+
+body {
+  /* vh is min height is equal to 100% of viewport height */
+  min-height: 100vh;
+  padding: 1.25em 0.625em;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  /* max-width: 37.5rem; */
+  max-width: 600px;
+  padding: 1.25em;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.2); */
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+
+.input-section {
+  display: flex;
+  margin-bottom: 1.25em;
+}
+
+#taskToDo {
+  flex-grow: 1;
+  padding: 0.75em;
+  border: 4px solid #ddd;
+  border-radius: 8px;
+}
+
+#input-section-button {
+  padding: 0.75em 0.9375em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75em;
+  margin-bottom: 0.5em;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#suggestionList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.75em;
+  background-color: #ffd9c2;
+  border-radius: 8px;
+  align-items: start;
+  gap: 1em;
+}
+
+#suggestionList li {
+  border: 2px solid #c2f6ff;
+  border-radius: 20px;
+  /* background-image: linear-gradient(45deg,#6ae70e,#08fded,#0072ed); */
+  background-image: linear-gradient(90deg, #fff7ad, #ffa9f9);
+  padding: 0 0.5em;
+}
+/* Media query adjustments for tablets and larger screens*/
+@media (min-width: 700px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .container {
+    padding: 1.875em;
+    width: 28.125rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
